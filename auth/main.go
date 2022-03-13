@@ -20,6 +20,10 @@ func auth(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, validToken)
 }
 
+func isAuthorized() {
+
+}
+
 func handleRequest() {
 	http.HandleFunc("/", auth)
 
@@ -44,7 +48,7 @@ func GenerateJWT() (string, error) {
 }
 
 func main() {
-	fmt.Println("Simple auth")
+	fmt.Println("Simple")
 	handleRequest()
 
 }
